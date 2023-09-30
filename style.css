@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&family=Nunito+Sans:wght@300;400;500;700;800;900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto+Slab:wght@300;400;500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  min-height: 100vh;
+}
+
+main{
+  position: relative;
+}
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5%;
+}
+
+.heading{
+  text-align: center;
+}
+
+.heading h1{
+  margin-bottom: 4rem;
+  font-size: 3rem;
+}
+
+.heading form{
+  margin-bottom: 4rem;
+}
+
+.heading form input, button{
+  padding: 8px 15px;
+  border: none;
+  border-radius: 3px;
+}
+
+.heading form input{
+  margin-right: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px;
+}
+
+button{
+  background-color: #1ea686;
+  color: white;
+  cursor: pointer;
+  transition: background-color .3s;
+}
+
+button:hover{
+  background-color: #35c9a7;
+}
+
+.search-results{
+  width: 80%;
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.search-result{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.search-result img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.search-result a{
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 10px;
+  color: black;
+  transition: color .3s;
+}
+
+.search-result a:hover{
+  color: #35c9a7;
+}
+
+footer{
+  display: flex;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem;
+  width: 100%;
+  background-color: rgb(226, 226, 226);
+}
+
+footer h3{
+  font-weight: 500;
+  margin-left: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+
+footer p{
+  font-size: 1rem;
+}
+
+button.show-more{
+  display: none;
+  margin-top: 40px;
+}
+
+
+/* ---------Responsive------------ */
+@media (max-width: 600px){
+  html{
+    font-size: 40%;
+  }
+}
