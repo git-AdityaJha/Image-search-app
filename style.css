@@ -129,4 +129,8 @@ button.show-more{
   html{
     font-size: 40%;
   }
+
+  button{
+    margin-top: 10px;
+  }
 }
