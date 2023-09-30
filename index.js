@@ -12,6 +12,11 @@ let page = 1;
 async function searchImages(){
   inputData = inputElement.value;
 
+  if(inputData === ""){ // checking if search section is empty
+    alert("Search section cannot be empty !");
+    return;
+  }
+
   const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&client_id=${accessKey}`;
 
   const response = await fetch(url);
@@ -40,14 +45,9 @@ async function searchImages(){
 }
 
 formElement.addEventListener("submit", (event) => {
-  if(inputData === ""){ // checking if search section is empty
-    alert("Search section cannot be empty !");
-  }
-  else{
-    event.preventDefault();
-    page = 1;
-    searchImages();
-  }
+  event.preventDefault();
+  page = 1;
+  searchImages();
 })
 
 showMoreElement.addEventListener("click", () => {
